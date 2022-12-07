@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./design/teglafal.jpg");
+    font-family: Arial, Verdana, sans-serif;
+}
+header{
+    display: grid;
+    grid-area: h;
+    height:300px;
+    background-image: url("./design/beer-new_401732638.jpg" );
+    background-size: cover;
+    color: white;
+    text-align: left;
+}
+h1{
+    font-weight: bold;
+    font-family: Garamond;
+    font-size: 32px;
+}
+nav{
+    display: grid;
+    grid-area: n;
+    padding: 20px;
+    text-align: center;
+}
+nav ul{
+    list-style-type: none;
+    list-style: none;
+}
+ nav li a{
+    text-decoration: none;
+    border: 1px solid white;
+    width:100%;
+    display: block;
+    color:rgb(233, 22, 22);
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: large;
+}
+nav li a:hover{
+    color: white;
+    background-color: lightcoral;
+}
+img{
+    width: 300px;
+    float: left;
+    padding: 3px;
+    margin-right: 20px;
+}
+article{
+    grid-area: a;
+    margin: right;
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+footer{
+    background-color: rgb(188, 190, 194);
+    grid-area: f;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color:black;
+}
+table {
+    width: 80%;
+    margin-left: 30px;
+    border-collapse: collapse;
+    text-align: center;
+}
+td,th{
+    border: 1px solid gray;
+}
+tr:nth-child(odd) {
+    background-color: black;
+}
+main{
+    margin: auto;
+    background-color: #333333;
+    max-width: 1000px;
+    width: 80%;
+        display: grid;
+        grid-template-columns:  auto auto auto;
+        grid-template-areas:    "h h h"
+                                "a a n"
+                                "f f f";
+}
+@media screen and (max-width:700px){
+    main{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:    "h"
+                                "n"
+                                "a"
+                                "f";
+    }
+}
